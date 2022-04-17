@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jogo.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- faz com que a função js se ajuste com o tamanho da tela disponivel do browser, é só testar no console -->
+
+<body onresize="ajustaTamanhoTelaJogo()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="img/coracao_cheio.png" alt="">
+            <img id="v2" src="img/coracao_cheio.png" alt="">
+            <img id="v3" src="img/coracao_cheio.png" alt="">
+        </div>
+
+        <div class="cronometro">
+            Tempo restante: <span id="cronometro"></span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criaMosquito = setInterval(function () { // adiciona, a cada 1 segundo, um novo mosquito
+            posicaoRandom()
+        }, clearMosquitoTempo)
+    </script>
+
+</body>
+
+</html>
